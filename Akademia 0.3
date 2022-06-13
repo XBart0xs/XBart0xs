@@ -1,7 +1,7 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
-	Title = "Akademia Policyjna fucker by:ConeWare#7771 v0.2a",
+	Title = "Akademia Policyjna fucker by:ConeWare#7771 v0.3a",
 	Style = 3,
 	SizeX = 500,
 	SizeY = 350,
@@ -117,22 +117,6 @@ end
 })
 
 local A = Y.Button({
-	Text = "Przelacz brame graniczna",
-	Callback = function()
-    fireclickdetector(game:GetService("Workspace")["Gate system"].Switch.ClickDetector)
-    
-		print("przelonczono")
-	end,
-	Menu = {
-		Information = function(self)
-			X.Banner({
-				Text = "powkurwiaj ludzi brama"
-			})
-		end
-	}
-})
-
-local A = Y.Button({
 	Text = "PistoletMOD",
 	Callback = function()
     
@@ -163,6 +147,33 @@ local A = Y.Button({
 		Information = function(self)
 			X.Banner({
 				Text = "Pod V masz autofire"
+			})
+		end
+	}
+})
+
+
+local A = Y.Button({
+	Text = "Give kamizelka i helm",
+	Callback = function()
+    game:GetService("Workspace")["[ACS 1.7.5/6] FAST Vest"].Giver.CFrame = CFrame.new(620, 30, 270)
+    game:GetService("Workspace").FAST.Giver.CFrame = CFrame.new(620, 30, 270)
+    
+    plr = game:GetService("Players").LocalPlayer
+    
+    X1 = plr.Character:FindFirstChild("HumanoidRootPart").CFrame.X
+    Y1 = plr.Character:FindFirstChild("HumanoidRootPart").CFrame.Y
+    Z1 = plr.Character:FindFirstChild("HumanoidRootPart").CFrame.Z
+    wait(0.01)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(620, 30, 270)
+    wait(0.01)
+    plr.Character.HumanoidRootPart.CFrame = CFrame.new(X1,Y1+5,Z1)
+
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "Daje ci kamizelke i helm"
 			})
 		end
 	}
