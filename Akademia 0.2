@@ -1,0 +1,170 @@
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+
+local X = Material.Load({
+	Title = "Akademia Policyjna fucker by:ConeWare#7771 v0.2a",
+	Style = 3,
+	SizeX = 500,
+	SizeY = 350,
+	Theme = "Dark",
+	ColorOverrides = {
+		MainFrame = Color3.fromRGB(235,235,235)
+	}
+})
+
+local Y = X.New({
+	Title = "1"
+})
+
+local Z = X.New({
+	Title = "2"
+})
+
+local A = Y.Button({
+	Text = "AlarmAbuse",
+	Callback = function()
+    local rs = game:GetService("RunService")
+
+rs.RenderStepped:Connect(function()
+fireclickdetector(game:GetService("Workspace")["ESSER MCP"].Part.ClickDetector)
+end)
+		print("Widza twoj nick")
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "wlacz wkurwiajacy alarmprzeciw pozarowy looped"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+	Text = "Gunshop TP",
+	Callback = function()
+	    	local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+    local location = CFrame.new(530, 15, 270)
+    local humanoid = game.Players.LocalPlayer.Character.Humanoid
+    humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+    wait(0.1)
+pl.CFrame = location
+		print("Teleported")
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "Teleport"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+	Text = "Przelacz brame graniczna",
+	Callback = function()
+    fireclickdetector(game:GetService("Workspace")["Gate system"].Switch.ClickDetector)
+    
+		print("przelonczono")
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "powkurwiaj ludzi brama"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+	Text = "Zablokuj 2 drzwi",
+	Callback = function()
+    while true do
+
+    fireclickdetector(game:GetService("Workspace")["Button door"].Close.ClickDetector)
+    wait(0.01)
+    end
+    
+		print("przelonczono")
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "zablokuj 2 drzwi od spawna"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+	Text = "Car spawner abuse",
+	Callback = function()
+    while true do
+local A_1 = "Nieoznakowany"
+local A_2 = "Civillian"
+local Event = game:GetService("ReplicatedStorage").DealershipEvents.SpawnCar
+Event:FireServer(A_1, A_2)
+wait(0.2)
+end
+
+		print("spawning")
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "zaspam caly car spawner"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+	Text = "Przelacz brame graniczna",
+	Callback = function()
+    fireclickdetector(game:GetService("Workspace")["Gate system"].Switch.ClickDetector)
+    
+		print("przelonczono")
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "powkurwiaj ludzi brama"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+	Text = "PistoletMOD",
+	Callback = function()
+    
+
+     for i,v in next, getgc(true) do
+    if type(v) == "table" and v.Ammo then
+       v.Ammo = math.huge
+       v.StoredAmmo = math.huge
+       v.BasedDamage = 150
+       v.LimboDamage = 150
+       v.ArmorDamage = 200
+       v.EShieldDamage = 200
+       v.gunRecoilMin = 0
+       v.gunRecoilMax = 0
+       v.AimGunRecoilMin = 0
+       v.AimGunRecoilMax = 0
+       v.KickbackMin = 0
+       v.KickbackMax = 0
+       v.AimKickbackMin = 0
+       v.AimKickbackMax = 0
+       v.Firerate = 0.02
+       
+        end
+    end
+    
+		print("przelonczono")
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "Uzyj autoclickera zeby miec karabin"
+			})
+		end
+	}
+})
