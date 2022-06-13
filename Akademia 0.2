@@ -137,27 +137,26 @@ local A = Y.Button({
 	Callback = function()
     
 
-     for i,v in next, getgc(true) do
-    if type(v) == "table" and v.Ammo then
-       v.Ammo = math.huge
-       v.StoredAmmo = math.huge
-       v.BasedDamage = 150
-       v.LimboDamage = 150
-       v.ArmorDamage = 200
-       v.EShieldDamage = 200
-       v.gunRecoilMin = 0
-       v.gunRecoilMax = 0
-       v.AimGunRecoilMin = 0
-       v.AimGunRecoilMax = 0
-       v.KickbackMin = 0
-       v.KickbackMax = 0
-       v.AimKickbackMin = 0
-       v.AimKickbackMax = 0
-       v.Firerate = 0.02
-       
+        for i,v in next, getgc(true) do
+        if type(v) == "table" and v.Ammo then
+        v.Ammo = math.huge
+        v.StoredAmmo = math.huge
+        v.BasedDamage = 150
+        v.LimboDamage = 150
+        v.ArmorDamage = 200
+        v.EShieldDamage = 200
+        v.gunRecoilMin = 0
+        v.gunRecoilMax = 0
+        v.AimGunRecoilMin = 0
+        v.AimGunRecoilMax = 0
+        v.KickbackMin = 0
+        v.KickbackMax = 0
+        v.AimKickbackMin = 0
+        v.AimKickbackMax = 0
+        v.Firerate = 0.02
         end
     end
-    
+
 		print("przelonczono")
 	end,
 	Menu = {
